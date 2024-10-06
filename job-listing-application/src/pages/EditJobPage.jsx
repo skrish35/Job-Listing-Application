@@ -4,8 +4,8 @@ import { toast } from 'react-toastify';
 
 const EditJobPage = ({ updateJob }) => {
 	const job = useLoaderData();
-    const { id } = useParams();
-    const navigate = useNavigate();
+	const { id } = useParams();
+	const navigate = useNavigate();
 
 	const [title, setTitle] = useState(job.title);
 	const [type, setType] = useState(job.type);
@@ -19,27 +19,27 @@ const EditJobPage = ({ updateJob }) => {
 	const [contactEmail, setContactEmail] = useState(job.company.contactEmail);
 	const [contactPhone, setContactPhone] = useState(job.company.contactPhone);
 
-    const handleSubmit = (e) => {
-			e.preventDefault();
-			const updatedJob = {
-                id,
-				title,
-				type,
-				description,
-				salary,
-				location,
-				company: {
-					name: companyName,
-					description: companyDescription,
-					contactEmail,
-					contactPhone,
-				},
-			};
-
-			updateJob(updatedJob);
-			toast(`Job ${updatedJob.title} updated successfully!!`);
-			navigate('/jobs');
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		const updatedJob = {
+			id,
+			title,
+			type,
+			description,
+			salary,
+			location,
+			company: {
+				name: companyName,
+				description: companyDescription,
+				contactEmail,
+				contactPhone,
+			},
 		};
+
+		updateJob(updatedJob);
+		toast(`Job ${updatedJob.title} updated successfully!!`);
+		navigate('/jobs');
+	};
 
 	return (
 		<section className='bg-indigo-50'>

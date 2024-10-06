@@ -14,7 +14,7 @@ const JobPage = ({ deleteJob }) => {
 		deleteJob(jobId);
 		toast(`Job ${jobId} deleted successfully`);
 		navigate('/jobs');
-	}
+	};
 
 	return (
 		<>
@@ -88,7 +88,10 @@ const JobPage = ({ deleteJob }) => {
 								>
 									Edit Job
 								</Link>
-								<button onClick={() => onDeleteJob(job.id)} className='bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline mt-4 block'>
+								<button
+									onClick={() => onDeleteJob(job.id)}
+									className='bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline mt-4 block'
+								>
 									Delete Job
 								</button>
 							</div>

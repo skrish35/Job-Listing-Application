@@ -77,7 +77,7 @@ const App = () => {
 			</Route>
 		)
 	);
-``
+	``;
 	return <RouterProvider router={router} />;
 };
 

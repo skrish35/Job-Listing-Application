@@ -13,7 +13,7 @@ const AddJobPage = ({ addNewJob }) => {
 	const [contactEmail, setContactEmail] = useState('');
 	const [contactPhone, setContactPhone] = useState('');
 
-    const navigate = useNavigate();
+	const navigate = useNavigate();
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
@@ -22,7 +22,7 @@ const AddJobPage = ({ addNewJob }) => {
 			type,
 			description,
 			salary,
-            location,
+			location,
 			company: {
 				name: companyName,
 				description: companyDescription,
@@ -32,8 +32,8 @@ const AddJobPage = ({ addNewJob }) => {
 		};
 
 		addNewJob(newJob);
-        toast(`Job ${newJob.title} added successfully!!`);
-        navigate('/jobs');
+		toast(`Job ${newJob.title} added successfully!!`);
+		navigate('/jobs');
 	};
 	return (
 		<>

@@ -2,9 +2,11 @@ import { NavLink } from 'react-router-dom';
 import logo from '../assets/images/logo.png';
 
 const Navbar = () => {
-  const isActiveTab = ({ isActive }) => {
-    return isActive ? 'bg-black text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2' : 'text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2'
-  }
+	const isActiveTab = ({ isActive }) => {
+		return isActive
+			? 'bg-black text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2'
+			: 'text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2';
+	};
 
 	return (
 		<>
